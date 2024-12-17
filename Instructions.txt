@@ -1,12 +1,31 @@
-1. Use a program like rufus to copy the ISO to a flash drive, you need to use rufus to make it bootable. 
-2. Format the remaining portion of the flash drive and add the rest of the files from the "flashdrive image" folder of the sharepoint.
-3. Insert the thumbdrive, turn on the machine and spam escape until it says booting into setup. 
-4. In the save and exit tab of the BIOS you'll boot the thumbdrive. 
-5. At the command prompt type the following without the quotes "E:\ApplyImage.bat E:\Transform.wim" and press y and enter at the prompt
-6. When it's done just type "exit" (without the quotes), the computer will reset and should land you at the login screen. 
+Make sure you have all necessary files. See links to all files at the bottom of this document. 
+
+User Rufus to create a bootable USB Drive using the Image named "WinPE_AMD64.ISO" I suggest using windows disk manager to create two partitions, Set one at 2 or 3 GB for this bootable image and the other for storing the .WIM. The benefit of this is that only one USB will be required. If you only have one partition you can use a second USB that holds the .WIM. Just make sure your file paths in the script are accurate.
+
+Copy the .Wim and the script named "ApplyImage" to your thumbdrive. 
+
+Boot your WinPE thumbdrive. To boot the thumbdrive you'll need to spam the "Esc" button until you see "booting into setup" on the screen. Look for the thumbdrive in the "save and exit" menu of the BIOS. 
+
+Once loaded you should be looking at a blue screen with a command prompt. Type "script path.bat" followed by "wim path.wim" I'll add an example for clarification. If your script is in a thumbdrive with the drive letter "E" and your wim was in a thumbdrive with letter "F", it should look exactly like this "E:\ApplyImage.bat F:\transform.wim". The script will be automated, so you should only need to press "y" at the prompt. 
+
+When it's done just type "exit" (without the quotes) and remove the thumbdrive, the computer will reset and should land you at the windows login screen. 
 
 
 
 
 
 
+
+
+
+
+
+Rufus. Copy and past the below link into your browser. 
+https://sourceforge.net/projects/rufus.mirror/
+
+Windows Image Path. Copy and past the below link into your browser. If you get an error, you may need someone to share the file with you. 
+https://barcodesinc.sharepoint.com/:u:/r/sites/Clients/Shared%20Documents/T/TransformCo%20(Transform%20Holdings%20-%20Sears%20-%20Kmart)/Configuration/FTP/Install11-64.wim?csf=1&web=1&e=x5Nq22
+
+
+WinPE_AMD64.ISO path. Copy and past the below link into your browser. If you get an error, you may need someone to share the file with you. 
+https://barcodesinc.sharepoint.com/sites/Clients/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FClients%2FShared%20Documents%2FT%2FTransformCo%20%28Transform%20Holdings%20%2D%20Sears%20%2D%20Kmart%29%2FConfiguration%2FEngineering%20Files%2FFlashDrive%20Image%2FWinPE%5Famd64%2Eiso&parent=%2Fsites%2FClients%2FShared%20Documents%2FT%2FTransformCo%20%28Transform%20Holdings%20%2D%20Sears%20%2D%20Kmart%29%2FConfiguration%2FEngineering%20Files%2FFlashDrive%20Image
