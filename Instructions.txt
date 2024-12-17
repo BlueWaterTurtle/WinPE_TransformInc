@@ -1,0 +1,12 @@
+1. Use a program like rufus to copy the ISO to a flash drive, you need to use rufus to make it bootable. 
+2. Format the remaining portion of the flash drive and add the rest of the files from the "flashdrive image" folder of the sharepoint.
+3. Insert the thumbdrive, turn on the machine and spam escape until it says booting into setup. 
+4. In the save and exit tab of the BIOS you'll boot the thumbdrive. 
+5. At the command prompt type the following without the quotes "E:\ApplyImage.bat E:\Transform.wim" and press y and enter at the prompt
+6. When it's done just type "exit" (without the quotes), the computer will reset and should land you at the login screen. 
+
+
+
+
+
+
