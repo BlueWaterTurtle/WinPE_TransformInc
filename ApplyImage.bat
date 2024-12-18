@@ -55,6 +55,7 @@ for /f "tokens=2* delims=	 " %%A in ('reg query HKLM\System\CurrentControlSet\Co
 @if %Firmware%==0x1 echo The PC is booted in BIOS mode. 
 @if %Firmware%==0x2 echo The PC is booted in UEFI mode. 
 @echo *********************************************************************
+:: I've commented out the below lines to better automate this script. It's been tested in it's current condition and only requires a single confimation check. 
 ::@echo Do you want to create a Recovery partition?
 ::@echo    (If you're going to be working with FFUs, and need 
 ::@echo     to expand the Windows partition after applying the FFU, type N). 
