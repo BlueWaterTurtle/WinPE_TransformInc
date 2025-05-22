@@ -67,7 +67,7 @@ for /f "tokens=2* delims=	 " %%A in ('reg query HKLM\System\CurrentControlSet\Co
 @if %Firmware%==0x2 echo    ...using UEFI (GPT) format and partitions. 
 @echo CAUTION: All the data on the disk will be DELETED.
 @Set READY=Y
-::@SET /P READY=Erase all data and continue? (Y or N):
+::@SET /P READY=Erase all data and continue? (Y or N):  ::be carful with this line, It may be a good idea to add this back in. I commented it out to streamline the config
 @if %READY%.==y. set READY=Y
 @if not %READY%.==Y. goto END
 @if %Firmware%.==0x1. if %RECOVERY%.==Y. diskpart /s CreatePartitions-BIOS.txt
