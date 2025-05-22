@@ -4,7 +4,7 @@ setlocal
 :: Set the source and destination paths
 :: 'sourceDrive' is the drive you want to capture an image of
 set sourceDrive=C:
-:: 'destinationPath' is the path where the captured image will be saved
+:: 'destinationPath' is the path where the captured image will be saved || Keep in mind, the destination path may need to be changed. 
 set destinationPath=D:\CapturedImage.wim
 
 :: Capture the image using DISM
